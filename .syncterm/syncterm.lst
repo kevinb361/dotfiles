@@ -1,0 +1,1832 @@
+	ConnectionType =Telnet
+	Port           =23
+	ScreenMode     =80x25
+	NoStatus       =true
+
+
+[! Planet Caravan BBS]
+	Address        =bbs
+	Port           =1337
+	Added          =Jan 16 2022 17:59:10
+	LastConnected  =Feb 16 2022 14:49:03
+	TotalCalls     =241
+	UserName       =Zylone
+	Password       =bealeAFB1978!!
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Hypernode]
+	Address        =hypernode.ddns.net
+	Port           =23
+	Added          =Jan 16 2022 19:12:07
+	LastConnected  =Jan 31 2022 09:36:11
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+[Nightvault]
+	Address        =nightvault.fsxnet.nz
+	Port           =2323
+	Added          =Jan 16 2022 19:21:54
+	LastConnected  =Jan 16 2022 19:22:05
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Lunatics Unleashed]
+	Address        =lunaticsunleashed.ddns.net
+	Port           =2333
+	Added          =Jan 16 2022 19:34:04
+	LastConnected  =Feb  8 2022 08:22:17
+	TotalCalls     =3
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Void]
+	Address        =voidbbs.com
+	Port           =23
+	Added          =Jan 16 2022 19:44:35
+	LastConnected  =Jan 16 2022 19:44:37
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Pharcyde]
+	Address        =bbs.pharcyde.org
+	Port           =31337
+	Added          =Jan 16 2022 19:54:49
+	LastConnected  =Jan 22 2022 23:49:32
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[The Creeping Crud]
+	Address        =bbs.thecreepingcrud.com
+	Port           =1313
+	Added          =Jan 16 2022 20:00:43
+	LastConnected  =Jan 16 2022 20:00:52
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Defile BBS - viroid]
+	Address        =defile.dynu.net
+	Port           =23
+	Added          =Jan 16 2022 20:04:51
+	LastConnected  =Jan 21 2022 18:46:13
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+[End of the Line]
+	Address        =endofthelinebbs.com
+	Port           =23
+	Added          =Jan 16 2022 20:11:53
+	LastConnected  =Jan 21 2022 16:27:08
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Wizards Rainbow]
+	Address        =wizardsrainbow.com
+	Port           =23
+	Added          =Jan 16 2022 20:18:48
+	LastConnected  =Jan 30 2022 00:13:35
+	TotalCalls     =3
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+
+
+
+
+[TQW]
+	Address        =bbs.erb.pw
+	Port           =45022
+	Added          =Jan 20 2022 14:53:02
+	LastConnected  =Jan 20 2022 15:16:42
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[distortion - jack phlash]
+	Address        =d1st.org
+	Port           =23
+	Added          =Jan 21 2022 10:25:46
+	LastConnected  =Jan 29 2022 01:42:29
+	TotalCalls     =4
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[BodaX - beardy]
+	Address        =bbs.beardy.se
+	Port           =22
+	Added          =Jan 21 2022 16:00:56
+	LastConnected  =Jan 29 2022 13:19:55
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+
+
+
+
+[1984 default]
+	Address        =1984.ws
+	Port           =23
+	Added          =Jan 21 2022 16:15:15
+	LastConnected  =Jan 29 2022 13:16:13
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Alpha Complex]
+	Address        =alphacomplex.us
+	Port           =2323
+	Added          =Jan 21 2022 16:33:20
+	LastConnected  =Feb  5 2022 10:10:51
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Particles BBS]
+	Address        =particlesbbs.dyndns.org
+	Port           =6400
+	Added          =Jan 21 2022 18:30:24
+	LastConnected  =Jan 23 2022 21:36:51
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+[Dogtown BBS]
+	Address        =bbs.kiwi.net
+	Port           =23
+	Added          =Jan 21 2022 18:47:07
+	LastConnected  =Jan 21 2022 18:47:08
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Vortex BBS]
+	Address        =vortexbbs.com
+	Port           =23
+	Added          =Jan 21 2022 19:03:05
+	LastConnected  =Jan 21 2022 19:03:06
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+
+
+
+
+
+
+[Xibalba]
+	Address        =xibalba.l33t.codes
+	Port           =44511
+	Added          =Jan 21 2022 19:58:15
+	LastConnected  =Jan 23 2022 21:37:14
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Slackers - GngrDr3M4n]
+	Address        =slackers.ddns.net
+	Port           =2222
+	Added          =Jan 21 2022 20:21:27
+	LastConnected  =Feb 13 2022 18:47:53
+	TotalCalls     =18
+	UserName       =Zylone
+	Password       =bealeAFB1978!!
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[20forBeers]
+	Address        =20forbeers.com
+	Port           =1337
+	Added          =Jan 22 2022 00:56:13
+	LastConnected  =Feb 14 2022 12:18:51
+	TotalCalls     =10
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[32-bit (Spitfire BBS software)]
+	Address        =x-bit.org
+	Port           =2323
+	Added          =Jan 22 2022 01:59:47
+	LastConnected  =Jan 22 2022 01:59:54
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[x-bit.org]
+	Address        =x-bit.org
+	Port           =23
+	Added          =Jan 22 2022 02:05:21
+	LastConnected  =Jan 22 2022 02:05:23
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Dark Systems - DW]
+	Address        =bbs.dsbbs.ca
+	Port           =23
+	Added          =Jan 22 2022 23:40:58
+	LastConnected  =Feb  3 2022 16:42:26
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Black Flag - Mystic - Main]
+	Address        =blackflag.acid.org
+	Port           =23
+	Added          =Jan 23 2022 02:34:57
+	LastConnected  =Feb  1 2022 20:51:04
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Another Droid BBS]
+	Address        =andr01d.zapto.org
+	Port           =9999
+	Added          =Jan 23 2022 15:57:26
+	LastConnected  =Feb  2 2022 14:35:53
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Insane Asylum - Ktulu]
+	Address        =asylum.erb.pw
+	Port           =23
+	Added          =Jan 23 2022 18:31:46
+	LastConnected  =Feb  3 2022 16:28:57
+	TotalCalls     =6
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[InkTwo-Smooth]
+	Address        =bbs.inktwo.com
+	Port           =23
+	Added          =Jan 23 2022 21:21:59
+	LastConnected  =Feb  3 2022 12:50:06
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Fantastica - lux]
+	Address        =fantastica.quest
+	Port           =23
+	Added          =Jan 24 2022 01:44:13
+	LastConnected  =Jan 24 2022 01:44:14
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Catch 22 - ignatius-renegade]
+	Address        =catch22bbs.com
+	Port           =24
+	Added          =Jan 24 2022 01:55:05
+	LastConnected  =Jan 29 2022 21:09:51
+	TotalCalls     =8
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[HTC - mercyful fate]
+	Address        =htc.zapto.org
+	Port           =23
+	Added          =Jan 24 2022 01:56:39
+	LastConnected  =Jan 24 2022 02:00:35
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Twinkle BBS - pequito]
+	Address        =twinklebbs.net
+	Port           =23
+	Added          =Jan 24 2022 02:14:16
+	LastConnected  =Never
+	TotalCalls     =0
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Force9 - RiPuk]
+	Address        =bbs.force9.org
+	Port           =23
+	Added          =Jan 24 2022 02:15:49
+	LastConnected  =Jan 27 2022 15:06:09
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Lunatic Fringe - Dribble]
+	Address        =fringe.darktech.org
+	Port           =23
+	Added          =Jan 24 2022 02:20:42
+	LastConnected  =Never
+	TotalCalls     =0
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Fading Black - westie]
+	Address        =fadingblack.net
+	Port           =23
+	Added          =Jan 24 2022 02:21:24
+	LastConnected  =Never
+	TotalCalls     =0
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+[!Archaic Binary]
+	Address        =bbs.archaicbinary.net
+	Port           =23
+	Added          =Jan 24 2022 09:46:30
+	LastConnected  =Jan 29 2022 01:55:46
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Catch 22 - ignatius-daydream]
+	Address        =catch22.zapto.org
+	Port           =26
+	Added          =Jan 24 2022 14:01:01
+	LastConnected  =Jan 29 2022 01:55:04
+	TotalCalls     =4
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[! Planet Caravan - Telnet]
+	Address        =bbs
+	Port           =22223
+	Added          =Jan 25 2022 10:54:13
+	LastConnected  =Feb  9 2022 11:04:28
+	TotalCalls     =79
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Dreamland]
+	Address        =bbs.dreamlandbbs.org
+	Port           =23
+	Added          =Jan 25 2022 16:41:40
+	LastConnected  =Jan 25 2022 16:42:45
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[The Forze - Opicron]
+	Address        =bbs.opicron.eu
+	Port           =23
+	Added          =Jan 27 2022 14:44:31
+	LastConnected  =Feb  5 2022 23:26:38
+	TotalCalls     =7
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[U.C.N Mainframe]
+	Address        =bbs.cyberpunks.network
+	Port           =23
+	Added          =Jan 29 2022 00:37:35
+	LastConnected  =Jan 29 2022 00:37:37
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Al's Geek Lab]
+	Address        =bbs.alsgeeklab.com
+	Port           =2323
+	Added          =Jan 29 2022 02:08:21
+	LastConnected  =Feb 14 2022 12:36:54
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+[tHE yARD BBS]
+	Address        =ty.cg
+	Port           =23
+	Added          =Jan 29 2022 03:43:39
+	LastConnected  =Jan 29 2022 03:45:13
+	TotalCalls     =3
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Throwback BBS]
+	Address        =bbs.throwbackbbs.com
+	Port           =23
+	Added          =Jan 29 2022 04:12:29
+	LastConnected  =Jan 29 2022 04:14:01
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+[mercy.boxathome.net]
+	Address        =22023
+	Port           =23
+	Added          =Jan 30 2022 02:06:18
+	LastConnected  =Never
+	TotalCalls     =0
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Babes On Fire]
+	Address        =dream.taxi
+	Port           =23
+	Added          =Jan 30 2022 02:35:49
+	LastConnected  =Jan 30 2022 02:35:50
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Banana Bender]
+	Address        =bbs.retrohack.se
+	Port           =8484
+	Added          =Jan 30 2022 02:40:15
+	LastConnected  =Jan 30 2022 02:40:24
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Haciend El Bananas]
+	Address        =haciend.bbs.fi
+	Port           =23
+	Added          =Jan 30 2022 02:53:44
+	LastConnected  =Feb  6 2022 04:23:41
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Razor's Domain/2]
+	Address        =bbs.razorsdomain.com
+	Port           =23230
+	Added          =Jan 30 2022 03:00:47
+	LastConnected  =Jan 30 2022 03:01:44
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Scene List]
+	Address        =scenelist.org
+	Port           =23
+	Added          =Jan 30 2022 03:21:27
+	LastConnected  =Jan 30 2022 03:21:29
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[The Bottomless Abyss]
+	Address        =bbs.bottomlessabyss.net
+	Port           =2222
+	Added          =Jan 31 2022 08:59:26
+	LastConnected  =Jan 31 2022 08:59:47
+	TotalCalls     =1
+	UserName       =Zylone
+	Password       =bealeAFB1978!!
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Archaic Binary]
+	Address        =bbs.archaicbinary.net
+	Port           =22
+	Added          =Jan 31 2022 09:21:53
+	LastConnected  =Jan 31 2022 09:22:49
+	TotalCalls     =2
+	UserName       =Zylone
+	Password       =bealeAFB1978!!
+	SystemPassword =
+	ConnectionType =SSH
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Absinthe]
+	Address        =absinthebbs.net
+	Port           =1940
+	Added          =Jan 31 2022 23:37:26
+	LastConnected  =Jan 31 2022 23:39:38
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+
+
+
+
+[Compufuck - shitty]
+	Address        =compufuck.xyz
+	Port           =23
+	Added          =Feb  1 2022 14:23:11
+	LastConnected  =Feb  6 2022 04:15:37
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[freeside.bbs.io]
+	Address        =freeside.bbs.io
+	Port           =23
+	Added          =Feb  1 2022 17:37:51
+	LastConnected  =Feb  1 2022 17:37:53
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Black Flag 2.0]
+	Address        =blackflag.acid.org
+	Port           =24
+	Added          =Feb  1 2022 20:31:31
+	LastConnected  =Feb  3 2022 20:33:08
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =2
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =RIPv3
+	Comment        =
+
+
+[Physics - lux]
+	Address        =bulletinboard.systems
+	Port           =23
+	Added          =Feb  3 2022 11:10:46
+	LastConnected  =Feb  3 2022 11:12:49
+	TotalCalls     =2
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[USS Excelsior - Darkman Almigh]
+	Address        =excelsiorbbs.ddns.net
+	Port           =2000
+	Added          =Feb  3 2022 16:45:15
+	LastConnected  =Feb  3 2022 16:45:23
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[ems!bbs]
+	Address        =ems-bbs.com
+	Port           =24
+	Added          =Feb  3 2022 17:00:25
+	LastConnected  =Feb  3 2022 17:00:29
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Capitol Shrill - Nolageek]
+	Address        =capitolshrill.com
+	Port           =23
+	Added          =Feb  4 2022 00:13:01
+	LastConnected  =Feb  4 2022 00:13:02
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[TOXiC - MaDDoG]
+	Address        =toxic.oldskoolbbs.com
+	Port           =1337
+	Added          =Feb  4 2022 12:35:06
+	LastConnected  =Feb  4 2022 12:50:23
+	TotalCalls     =5
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =132x37
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Splatter Haus]
+	Address        =capitolshrill.com
+	Port           =666
+	Added          =Feb  4 2022 12:53:40
+	LastConnected  =Feb  4 2022 12:56:12
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Reconquista BBS - Smooth]
+	Address        =rq.araknet.xyz
+	Port           =8888
+	Added          =Feb  7 2022 09:59:18
+	LastConnected  =Feb  7 2022 09:59:26
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
+
+
+[Dura]
+	Address        =dura-bbs.net
+	Port           =6359
+	Added          =Feb 13 2022 23:39:43
+	LastConnected  =Feb 13 2022 23:56:26
+	TotalCalls     =1
+	UserName       =
+	Password       =
+	SystemPassword =
+	ConnectionType =Telnet
+	FlowControl    =RTSCTS
+	ScreenMode     =80x25
+	NoStatus       =true
+	DownloadPath   =/home/kevin/
+	UploadPath     =/home/kevin/
+	LogFile        =
+	TransferLogLevel=Info
+	TelnetLogLevel =Info
+	AppendLogFile  =true
+	BPSRate        =0
+	ANSIMusic      =1
+	AddressFamily  =PerDNS
+	Font           =Codepage 437 English
+	HidePopups     =false
+	RIP            =Off
+	Comment        =
