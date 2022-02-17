@@ -7,7 +7,7 @@ set $mod Mod4
 
 # Font
 #font pango:DejaVu Sans Mono 10
-font pango:Hack 10
+font Hack 12
 
 # Thin borders
 hide_edge_borders both
@@ -197,7 +197,7 @@ bar {
     id top-bar
     position bottom
     output DisplayPort-2
-    font pantgo:Hack 10
+    font Hack 12
 }
 
 bar {
@@ -206,7 +206,7 @@ bar {
 	output HDMI-A-0
         status_command i3status -c ~/.config/i3/i3status.conf
 #	font pango:Dejavu Sans Mono 10
-    font pango:Hack 10
+    font Hack 12
 }
 
 
