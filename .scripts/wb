@@ -1,0 +1,2 @@
+#!/bin/bash
+wine $HOME/.local/bin/winbox64.exe

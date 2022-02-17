@@ -1,0 +1,2 @@
+#!/bin/bash
+rtl_fm -f 99.5e6 -s 200000 -r 44000 |aplay -r 44000 -f S16_LE

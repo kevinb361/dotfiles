@@ -1,0 +1,1 @@
+rtl_fm -d 0 -f 162.55M -l 10 -s 48.8k -p55 | sox -t raw -b 16 -e signed-integer -r 48000 -c 1 - -t raw - vol 0.4 sinc 0.2k-4.5k -a 110 rate 48000 gain -3 compand 0.02,0.20 5:-60,-40,-10 -5 -90 0.1 | aplay -t raw -f S16_LE -r 48000 -c 1

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#while getopts s: flag; do
+#    case "${flag}" in
+#        s) station=${OPTARG};;
+#    esac
+#done
+#echo $station    
+#rtl_fm -f $1e6 -M $2 -s 200000 -r 44000 |aplay -r 44000 -f S16_LE
+#wbfm
+rtl_fm -f ${1}e6 -s 170K -o 4 -A fast -l 0 -E deemp -p -3 -F 9| aplay -f S16_LE -t raw -c 1 -r 170000
+

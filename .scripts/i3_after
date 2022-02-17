@@ -1,0 +1,8 @@
+#!/bin/bash
+sleep 2
+i3-msg exec "i3-msg '[class="discord"] focus'"
+i3-msg exec "i3-msg 'resize set width 2100'"
+sleep 2
+i3-msg exec "i3-msg '[class="discord"] focus'"
+i3-msg exec "i3-msg 'resize set width 2100'"
+
