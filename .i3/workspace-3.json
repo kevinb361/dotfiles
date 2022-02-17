@@ -1,0 +1,103 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 3 children
+    "layout": "splitv",
+    "percent": 0.4,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "name": "YouTube Music",
+            "percent": 0.183333333333333,
+            "swallows": [
+               {
+                "class": "^Surf$",
+                "instance": "^surf$",
+               // "machine": "^desktop$",
+                "title": ".YouTube\\ Music$"
+               // "window_role": "^Surf\\[8\\]$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "name": "http://zm/basic.html",
+            "percent": 0.258333333333333,
+            "swallows": [
+               {
+                "class": "^qutebrowser$"
+               // "instance": "^brave-browser$",
+               // "machine": "^desktop$",
+               // "title": ".zm\\/basic\\.html$"
+               // "window_role": "^Surf\\[8\\]$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Mail - Blalock, Kevin - Outlook",
+            "percent": 0.558333333333333,
+            "swallows": [
+               {
+                "class": "^Surf$",
+                "instance": "^surf$",
+               // "machine": "^desktop$",
+                "title": ".Mail\\ \\-\\ Blalock\\,\\ Kevin\\ \\-\\ Outlook$"
+               // "window_role": "^Surf\\[8\\]$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1418,
+       "width": 1719,
+       "x": 1721,
+       "y": 22
+    },
+    "name": "Discord",
+    "percent": 0.6,
+    "swallows": [
+       {
+        "class": "^discord$",
+        "instance": "^discord$",
+       // "machine": "^desktop$",
+       // "title": "^Discord$",
+        "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
+

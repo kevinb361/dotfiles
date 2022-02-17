@@ -1,0 +1,74 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 480,
+       "width": 876,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "weechat",
+    "percent": 0.358333333333333,
+    "swallows": [
+       {
+        "class": "^Alacritty$",
+       // "instance": "^urxvt$",
+       // "machine": "^desktop$",
+        "title": "^weechat$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1387,
+       "width": 1145,
+       "x": 1147,
+       "y": 1493
+    },
+    "marks": [],
+    "name": "i3: Layout saving in i3 - Brave",
+    "percent": 0.358333333333333,
+    "swallows": [
+       {
+        "class": "^Firefox$"
+       // "instance": "^Firefox$"
+       // "machine": "^desktop$",
+       // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Brave$",
+       // "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 480,
+       "width": 876,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "kevin@desktop: ~",
+    "percent": 0.283333333333333,
+    "swallows": [
+       {
+        "class": "^Alacritty$",
+       // "instance": "^urxvt$",
+       // "machine": "^desktop$",
+        "title": "^kevin\\@desktop\\:\\ \\~$"
+       }
+    ],
+    "type": "con"
+}
+
