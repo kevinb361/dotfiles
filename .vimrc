@@ -1,6 +1,6 @@
 colorscheme delek 
 set number relativenumber	" Display line numbers
-set clipboard=unnamed	" Copy/paste between vim and other programs
+set clipboard=unnamedplus	" Copy/paste between vim and other programs
 syntax enable			" Enable syntax highlighting
 
 set laststatus=2		" Always show statusline
