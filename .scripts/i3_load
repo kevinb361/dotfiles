@@ -1,0 +1,10 @@
+#!/bin/bash
+i3-msg exec "discord"
+i3-msg exec "i3-msg 'exec qutebrowser -R http://zm/basic.html'"
+i3-msg exec "i3-msg 'exec surf outlook.office.com'"
+i3-msg exec "i3-msg 'exec surf music.youtube.com'"
+i3-msg exec "teams"
+i3-msg exec "i3-msg 'exec alacritty -t weechat -e weechat'"
+i3-msg exec "i3-msg 'exec firefox'"
+i3-msg exec "i3-msg 'exec alacritty'"
+i3_after
