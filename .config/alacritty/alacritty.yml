@@ -202,8 +202,8 @@ colors:
     # present. If the bright foreground color is not set, or
     # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
     # color will be used.
-    #dim_foreground: '#828482'
-    #bright_foreground: '#eaeaea'
+    dim_foreground: '#828482'
+    bright_foreground: '#eaeaea'
 
   # Cursor colors
   #
@@ -213,7 +213,7 @@ colors:
   # affected cell, or hexadecimal colors like #ff00ff.
   cursor:
     text: CellBackground
-    cursor: '#a8a8a8' 
+    cursor: '#fc54fc'
 
   # Vi mode cursor colors
   #
@@ -223,7 +223,7 @@ colors:
   # affected cell, or hexadecimal colors like #ff00ff.
   vi_mode_cursor:
     text: CellBackground
-    cursor: '#a8a8a8' 
+    cursor: '#fc54fc' 
 
   # Search colors
   #

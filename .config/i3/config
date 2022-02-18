@@ -174,12 +174,18 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-# Assign monitors and resolution
-exec --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --primary
-exec --no-startup-id xrandr --output DisplayPort-2 --mode 3440x1440 --above HDMI-A-0
-
 # Set wallpaper after xrandr otherwise it is funky size
-exec --no-startup-id "feh --bg-fill --no-xinerama /home/kevin/Pictures/wallpapers/5k-darkwaves.jpg"
+exec_always --no-startup-id "feh --bg-fill --no-xinerama /home/kevin/Pictures/wallpapers/5k-darkwaves.jpg"
+
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #808080 #808080 #ffffff #808080   #808080
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #000000
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -197,18 +203,40 @@ bar {
     id top-bar
     position bottom
     output DisplayPort-2
-    font Hack 12
+    status_command i3blocks -c ~/.config/i3blocks/config-top
+    font pango:Hack 10
+    tray_output DisplayPort-2
+        colors {
+                background #000000
+                statusline #c0c0c0
+                separator #808080
+                # colorclass       <border> <background> <text>
+                focused_workspace  #0000f0  #0000f0     #00ffff
+                active_workspace   #000080  #000080     #808080
+                inactive_workspace #000000  #000000     #808080
+                urgent_workspace   #ff0000  #ff0000     #000000
+                }
 }
 
 bar {
 	id bottom-bar
 	position top 
 	output HDMI-A-0
-        status_command i3status -c ~/.config/i3/i3status.conf
-#	font pango:Dejavu Sans Mono 10
-    font Hack 12
+    #status_command i3status -c ~/.config/i3/i3status.conf
+    status_command i3blocks
+    font pango:Hack 10
+    tray_output none 
+        colors {
+                background #000000
+                statusline #c0c0c0
+                separator #808080
+                # colorclass       <border> <background> <text>
+                focused_workspace  #0000f0  #0000f0     #00ffff
+                active_workspace   #000080  #000080     #808080
+                inactive_workspace #000000  #000000     #808080
+                urgent_workspace   #ff0000  #ff0000     #000000
+                }
 }
-
 
 # Assign Workspaces
 workspace "1" output HDMI-A-0
@@ -216,6 +244,9 @@ workspace "2" output HDMI-A-0
 workspace "3" output DisplayPort-2 
 workspace "4" output DisplayPort-2
 
+# Assign monitors and resolution
+exec --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --primary
+exec --no-startup-id xrandr --output DisplayPort-2 --mode 3440x1440 --above HDMI-A-0
 
 # Put of all of this CLASS on X workspace
 assign [class="Microsoft Teams - Preview"] 4
@@ -234,4 +265,5 @@ exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/kevin/.i3/workspa
 for_window [class="discord"] floating enable
 exec --no-startup-id "i3_load"
 for_window [class="discord"] floating disable
-exec_always --no-startup-id "picom"
+# Load the compositor
+exec --no-startup-id "picom"

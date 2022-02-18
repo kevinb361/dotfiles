@@ -151,3 +151,14 @@ min_width=CPU: 100.00%
 #instance=NUM
 #interval=once
 #signal=11
+
+[weather]
+command=~/.config/i3blocks/blocks/weather
+instance=4726206
+interval=60
+
+[webcam]
+command=~/.config/i3blocks/blocks/webcam
+label=
+instance=/dev/video0
+interval=5
