@@ -6,6 +6,7 @@ if [[ -c "${device}" ]]; then
     echo "rec"
     echo "rec"
     echo ""
+    exit 33
   else
     echo "off"
     echo "off"
