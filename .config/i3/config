@@ -9,7 +9,7 @@ set $mod Mod4
 font pango:JetBrains Mono 12
 
 # Configure border style <normal|none|pixel x>
-default_border none
+default_border pixel 0 
 default_floating_border none
 
 # Hide edge borders <none|vertical|horizontal|both|smart> 
@@ -21,9 +21,18 @@ floating_modifier $mod
 # Stop following the mouse
 focus_follows_mouse no
 
-####
-#### KEY BINDINGS
-####
+# $mod+o followed by option
+# This brings up the launcher in the top bar... and shows the following options
+set $mode_launcher Launch: [f]irefox [n]autilus [s]dr++
+bindsym $mod+o mode "$mode_launcher"
+
+mode "$mode_launcher" {
+    bindsym f exec firefox
+    bindsym n exec nautilus
+    bindsym s exec sdrpp
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
 
 # Start a terminal
 bindsym $mod+Return exec alacritty 
@@ -203,6 +212,9 @@ exec --no-startup-id pasystray
 # finds out, if available)
 bar {
     id top-bar
+    mode hide
+    hidden_state hide
+    modifier Mod1
     position bottom
     output DisplayPort-2
     status_command i3blocks -c ~/.config/i3blocks/config-top
@@ -222,6 +234,9 @@ bar {
 
 bar {
 	id bottom-bar
+    mode hide
+    hidden_state hide
+    modifier Mod1
 	position top 
 	output HDMI-A-0
     #status_command i3status -c ~/.config/i3/i3status.conf
@@ -245,6 +260,12 @@ workspace "1" output HDMI-A-0
 workspace "2" output HDMI-A-0
 workspace "3" output DisplayPort-2 
 workspace "4" output DisplayPort-2
+
+# Automatic back-and-forth when switching to the current workspace
+workspace_auto_back_and_forth yes
+
+# Delaying urgency hint reset on workspace change
+force_display_urgency_hint 500 ms
 
 # Assign monitors and resolution
 #exec --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --primary
@@ -270,5 +291,5 @@ for_window [class="discord"] floating disable #border normal
 # Load the compositor
 exec --no-startup-id "picom --experimental-backends"
 
-# This was created with arandr to set the screens
+# This was created with arandr to set the screens, had to add the --above flag to work properly
 exec --no-startup-id xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 3440x1440 --pos 0x0 --above HDMI-A-0 --rotate normal --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x1440 --rotate normal
