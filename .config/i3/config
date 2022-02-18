@@ -245,8 +245,8 @@ workspace "3" output DisplayPort-2
 workspace "4" output DisplayPort-2
 
 # Assign monitors and resolution
-exec --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --primary
-exec --no-startup-id xrandr --output DisplayPort-2 --mode 3440x1440 --above HDMI-A-0
+#exec --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --primary
+#exec --no-startup-id xrandr --output DisplayPort-2 --mode 3440x1440 --above HDMI-A-0
 
 # Put of all of this CLASS on X workspace
 assign [class="Microsoft Teams - Preview"] 4
@@ -267,3 +267,6 @@ exec --no-startup-id "i3_load"
 for_window [class="discord"] floating disable
 # Load the compositor
 exec --no-startup-id "picom"
+
+# This was created with arandr to set the screens
+exec --no-startup-id xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 3440x1440 --pos 0x0 --above HDMI-A-0 --rotate normal --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x1440 --rotate normal
