@@ -50,11 +50,11 @@ Xft.lcdfilter: lcdfilter
 
 
 !! URxvt Appearance
-*.font: xft:hack:style=Regular:size=12
+*.font: xft:JetBrains Mono:style=Regular:size=12
 !*.font: xft:Inconsolata Nerd Font Mono:style=Bold:size=12
-*.boldFont: xft:hack:style=Bold:size=12
-*.italicFont: xft:hack:style=Italic:size=12
-*.boldItalicFont: xft:hack:style=Bold Italic:size=12
+*.boldFont: xft:JetBrains Mono:style=Bold:size=12
+*.italicFont: xft:JetBrains Mono:style=Italic:size=12
+*.boldItalicFont: xft:JetBrains Mono:style=Bold Italic:size=12
 
 *boldMode: false
 
