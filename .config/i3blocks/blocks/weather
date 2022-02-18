@@ -16,7 +16,7 @@ ICON_STORM=""
 ICON_SNOW=""
 ICON_FOG=""
 
-SYMBOL_CELSIUS=""
+SYMBOL_CELSIUS="℉"
 
 WEATHER_URL="http://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=${API_KEY}&units=imperial"
 
