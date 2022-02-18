@@ -13,7 +13,7 @@ Xft.lcdfilter: lcdfilter
 ! special
 *.foreground:   #a8a8a8
 *.background:   #000000
-*.cursorColor:  #a8a8a8
+*.cursorColor:  #fc54fc
 
 ! black
 *.color0:       #000000
