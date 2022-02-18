@@ -107,9 +107,9 @@ interval=30
 #min_width=CPU: 100.00%
 #separator=false
 
-[load]
-#[load_average]
-command=~/.config/i3blocks/blocks/load
+#[load]
+[load_average]
+#command=~/.config/i3blocks/blocks/load
 label=
 interval=10
 
