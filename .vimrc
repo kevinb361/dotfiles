@@ -1,3 +1,4 @@
+execute pathogen#infect()
 colorscheme delek 
 set number relativenumber	" Display line numbers
 set clipboard=unnamedplus	" Copy/paste between vim and other programs
