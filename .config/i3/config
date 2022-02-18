@@ -216,7 +216,7 @@ bar {
                 focused_workspace  #0000f0  #0000f0     #00ffff
                 active_workspace   #000080  #000080     #808080
                 inactive_workspace #000000  #000000     #808080
-                urgent_workspace   #ff0000  #ff0000     #000000
+                urgent_workspace   #000000  #000000     #ff0000
                 }
 }
 
@@ -236,7 +236,7 @@ bar {
                 focused_workspace  #0000f0  #0000f0     #00ffff
                 active_workspace   #000080  #000080     #808080
                 inactive_workspace #000000  #000000     #808080
-                urgent_workspace   #ff0000  #ff0000     #000000
+                urgent_workspace   #000000  #000000     #ff0000
                 }
 }
 
