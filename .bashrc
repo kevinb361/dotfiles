@@ -156,6 +156,7 @@ bind "set completion-ignore-case on"
 #pactl set-default-sink alsa_output.pci-0000_0e_00.4.analog-stereo
 
 # dotfile repo stuff
+# taken from: https://www.atlassian.com/git/tutorials/dotfiles
 alias config='/usr/bin/git --git-dir=/home/kevin/.cfg/ --work-tree=/home/kevin'
 
 # Install Ruby Gems to ~/gems

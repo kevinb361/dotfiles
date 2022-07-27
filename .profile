@@ -39,3 +39,7 @@ fi
 
 # Set default audio sink
 #pactl set-default-sink 2
+
+# Set sound to 50% ## Default card set in /etc/asound.conf after listing cards
+# with cat /etc/proc/asound/cards
+amixer set Master 45% unmute
