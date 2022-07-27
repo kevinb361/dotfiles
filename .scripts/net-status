@@ -1,0 +1,24 @@
+#!/bin/bash
+
+## net-status
+# This script loops through each ADDRESS# / NAME# entries and sends a single ping
+# If it does not receive a response, it sends a critical alert to dunst with NAME# 
+
+ARRAY_DETAILS=( "70.123.224.1:ISP:Spectrum"
+                "99.126.112.1:ISP:ATT"
+                "10.255.1.2:VPN:Dallas tunnel"
+                "10.255.2.2:VPN:Chicago tunnel" )
+
+while true; do
+    for hostDetails in "${ARRAY_DETAILS[@]}"; do
+        arrIN=(${hostDetails//:/ })
+        IP=${arrIN[0]}
+        TYPE=${arrIN[1]}
+        NAME=${arrIN[2]}
+            ping -c 3 $IP &> /dev/null
+            if [[ $? -ne 0 ]]; then
+                notify-send -u critical -t 60000 "$TYPE Status" "$NAME is down!"
+            fi
+    done 
+    sleep 5
+done    
