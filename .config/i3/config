@@ -19,7 +19,10 @@ hide_edge_borders both
 floating_modifier $mod
 
 # Stop following the mouse
-focus_follows_mouse no
+focus_follows_mouse yes
+
+# Mouse doesn't jump from one screen to another
+mouse_warping none
 
 # $mod+o followed by option
 # This brings up the launcher in the top bar... and shows the following options
@@ -37,20 +40,28 @@ mode "$mode_launcher" {
 # Start a terminal
 bindsym $mod+Return exec alacritty 
 
+# dunst keyboard shortcuts
+bindsym $mod+x exec dunstctl close-all
+bindsym Ctrl+BackSpace exec dunstctl history-pop
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id volchange volup
+bindsym XF86AudioLowerVolume exec --no-startup-id volchange voldown
+bindsym XF86AudioMute exec --no-startup-id volchange volmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +3% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -3% && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+#bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# bindsym $mod+d exec --no-startup-id rofi -show combi -run-command "i3-msg exec '{cmd}'" icon-theme "Papirus" -show-icons
+ bindsym $mod+d exec --no-startup-id rofi -show combi
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -148,7 +159,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Lock screen
-bindsym Control+$mod+l exec i3lock --color=000000
+#bindsym Control+$mod+l exec i3lock --color=000000
+bindsym Control+$mod+l exec convert /home/kevin/Pictures/wallpapers/5k-darkwaves.jpg RGB:- | i3lock --raw 3440x2880:rgb --image /dev/stdin
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -186,8 +198,7 @@ bindsym $mod+r mode "resize"
 
 
 # Set wallpaper after xrandr otherwise it is funky size
-exec_always --no-startup-id "feh --bg-fill --no-xinerama /home/kevin/Pictures/wallpapers/5k-darkwaves.jpg"
-
+exec_always --no-startup-id "feh --no-fehbg --bg-fill --no-xinerama /home/kevin/Pictures/wallpapers/5k-darkwaves.jpg"
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #808080 #808080 #ffffff #808080   #808080
@@ -201,11 +212,13 @@ client.background       #000000
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 #exec --no-startup-id nm-applet
+
 # PulseAudio system tray
-exec --no-startup-id pasystray
+#exec --no-startup-id pasystray
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -218,16 +231,16 @@ bar {
     position bottom
     output DisplayPort-2
     status_command i3blocks -c ~/.config/i3blocks/config-top
-    font pango:JetBrains Mono 10
+    font pango:JetBrains Mono 14
     tray_output DisplayPort-2
         colors {
                 background #000000
                 statusline #c0c0c0
                 separator #808080
                 # colorclass       <border> <background> <text>
-                focused_workspace  #0000f0  #0000f0     #00ffff
-                active_workspace   #000080  #000080     #808080
-                inactive_workspace #000000  #000000     #808080
+                focused_workspace  #aa00aa  #000000     #ff55ff
+                active_workspace   #333333  #333333     #ffffff
+                inactive_workspace #111111  #111111     #aaaaaa
                 urgent_workspace   #000000  #000000     #ff0000
                 }
 }
@@ -241,16 +254,16 @@ bar {
 	output HDMI-A-0
     #status_command i3status -c ~/.config/i3/i3status.conf
     status_command i3blocks
-    font pango:JetBrains Mono 10
+    font pango:JetBrains Mono 14
     tray_output none 
         colors {
                 background #000000
                 statusline #c0c0c0
                 separator #808080
                 # colorclass       <border> <background> <text>
-                focused_workspace  #0000f0  #0000f0     #00ffff
-                active_workspace   #000080  #000080     #808080
-                inactive_workspace #000000  #000000     #808080
+                focused_workspace  #aa00aa  #000000     #ff55ff
+                active_workspace   #333333  #333333     #ffffff
+                inactive_workspace #111111  #111111     #aaaaaa
                 urgent_workspace   #000000  #000000     #ff0000
                 }
 }
@@ -260,23 +273,32 @@ workspace "1" output HDMI-A-0
 workspace "2" output HDMI-A-0
 workspace "3" output DisplayPort-2 
 workspace "4" output DisplayPort-2
+workspace "5" output DisplayPort-2
+workspace "0" output HDMI-A-0
 
 # Automatic back-and-forth when switching to the current workspace
 workspace_auto_back_and_forth yes
 
+# workspace layout by default
+workspace_layout stacking
+
 # Delaying urgency hint reset on workspace change
 force_display_urgency_hint 500 ms
 
-# Assign monitors and resolution
-#exec --no-startup-id xrandr --output HDMI-A-0 --mode 3440x1440 --primary
-#exec --no-startup-id xrandr --output DisplayPort-2 --mode 3440x1440 --above HDMI-A-0
-
 # Put of all of this CLASS on X workspace
+## use 'xprop |grep WM_CLASS'
+## WM_CLASS(STRING) = "Navigator", "firefox"
+## The first element is always the instance, the second always the class. Be careful: the case matters.
 assign [class="Microsoft Teams - Preview"] 4
+assign [class="Lutris"] 10
+assign [class="battle.net.exe"] 10
+assign [class="diabloimmortal.exe"] 10
+assign [class="Pulseeffects"] 5
+assign [class="Pavucontrol"] 5
 
 # Allow these apps to float
-for_window [class="Lutris" instance="lutris"] floating enable
-for_window [class="battle.net.exe" title="battle.net.exe"] floating enable
+for_window [class="diabloimmortal.exe"] floating enable
+for_window [class="microsoft teams - preview"] floating enable
 
 # put screen templates in place
 exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/kevin/.i3/workspace-1.json'"
@@ -289,7 +311,12 @@ for_window [class="discord"] floating enable
 exec --no-startup-id "i3_load"
 for_window [class="discord"] floating disable #border normal
 # Load the compositor
-exec --no-startup-id "picom --experimental-backends"
+#exec --no-startup-id "picom --experimental-backends"
+exec --no-startup-id "picom -b --experimental-backends"
 
+# Assign monitors and resolution
 # This was created with arandr to set the screens, had to add the --above flag to work properly
 exec --no-startup-id xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 3440x1440 --pos 0x0 --above HDMI-A-0 --rotate normal --output HDMI-A-0 --primary --mode 3440x1440 --pos 0x1440 --rotate normal
+exec --no-startup-id "pulseeffects"
+exec --no-startup-id "pavucontrol"
+exec --no-startup-id "net-status"

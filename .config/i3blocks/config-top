@@ -24,6 +24,7 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
+color=#aaaaaa
 command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
@@ -33,36 +34,36 @@ markup=none
 # The first parameter sets the step (and units to display)
 # The second parameter overrides the mixer selection
 # See the script for details.
-[volume]
-label=VOL
-label=♪
-instance=Master
-#instance=PCM
-interval=once
-signal=10
+#[volume]
+#label=VOL
+#label=♪
+#instance=Master
+##instance=PCM
+#interval=once
+#signal=10
 
-[webcam]
-command=~/.config/i3blocks/blocks/webcam
-label=
-instance=/dev/video0
-interval=5
+#[webcam]
+#command=~/.config/i3blocks/blocks/webcam
+#label=
+#instance=/dev/video0
+#interval=5
 
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
-[memory]
-command=~/.config/i3blocks/blocks/memory
-label=
-instance=mem;free
-separator=false
-interval=30
+#[memory]
+#command=~/.config/i3blocks/blocks/memory
+#label=
+#instance=mem;free
+#separator=false
+#interval=30
 
-[memory]
-command=~/.config/i3blocks/blocks/memory
-label=
-instance=swap;total
-separator=true
-interval=30
+#[memory]
+#command=~/.config/i3blocks/blocks/memory
+#label=
+#instance=swap;total
+#separator=true
+#interval=30
 
 
 
@@ -108,10 +109,10 @@ interval=30
 #separator=false
 
 #[load]
-[load_average]
+#[load_average]
 #command=~/.config/i3blocks/blocks/load
-label=
-interval=10
+#label=
+#interval=10
 
 # Battery indicator
 #

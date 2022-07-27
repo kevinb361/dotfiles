@@ -38,7 +38,7 @@
     "percent": 0.358333333333333,
     "swallows": [
        {
-        "class": "^Firefox$"
+        "class": "^firefox$"
        // "instance": "^Firefox$"
        // "machine": "^desktop$",
        // "title": "^i3\\:\\ Layout\\ saving\\ in\\ i3\\ \\-\\ Brave$",

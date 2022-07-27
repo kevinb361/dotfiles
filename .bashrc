@@ -151,8 +151,13 @@ shopt -s checkwinsize # checks term size when bash regains control
 bind "set completion-ignore-case on"
 
 # Set the audio devices manually since it won't do it the right way..
-pactl set-default-source alsa_input.usb-Audient_Audient_iD14-00.multichannel-input
-pactl set-default-sink alsa_output.pci-0000_0e_00.4.analog-stereo
+# Moved this to i3 config...
+#pactl set-default-source alsa_input.usb-Audient_Audient_iD14-00.multichannel-input
+#pactl set-default-sink alsa_output.pci-0000_0e_00.4.analog-stereo
 
 # dotfile repo stuff
 alias config='/usr/bin/git --git-dir=/home/kevin/.cfg/ --work-tree=/home/kevin'
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"

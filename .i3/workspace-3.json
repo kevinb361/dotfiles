@@ -15,15 +15,12 @@
                "x": 0,
                "y": 0
             },
-            "name": "YouTube Music",
+            "name": "tidal-hifi",
             "percent": 0.183333333333333,
             "swallows": [
                {
-                "class": "^Surf$",
-                "instance": "^surf$",
-               // "machine": "^desktop$",
-                "title": ".YouTube\\ Music$"
-               // "window_role": "^Surf\\[8\\]$"
+                "class": "^tidal-hifi$",
+                "instance": "^tidal-hifi$",
                }
             ],
             "type": "con"
@@ -38,7 +35,7 @@
                "x": 0,
                "y": 0
             },
-            "name": "http://zm/basic.html",
+            "name": "http://zm/zm/basic.html",
             "percent": 0.258333333333333,
             "swallows": [
                {
@@ -87,7 +84,7 @@
        "x": 1721,
        "y": 22
     },
-    "name": "Discord",
+    "name": "discord",
     "percent": 0.6,
     "swallows": [
        {
