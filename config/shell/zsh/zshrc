@@ -1,0 +1,34 @@
+# Public Zsh configuration
+# Safe to commit and mirror
+
+# ---- Environment ----
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+
+# ---- History ----
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
+# ---- Completion ----
+autoload -Uz compinit
+compinit
+
+# ---- Prompt (simple, portable) ----
+autoload -Uz promptinit
+promptinit
+prompt pure 2>/dev/null || prompt default
+
+# ---- Aliases (safe) ----
+alias ll='ls -lah'
+alias grep='grep --color=auto'
+
+# ---- Local overrides (NOT committed) ----
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
