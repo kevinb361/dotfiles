@@ -1,0 +1,30 @@
+# Public, shareable git configuration
+# Safe to commit and mirror
+
+[core]
+  editor = vim
+  autocrlf = input
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = false
+
+[push]
+  default = simple
+
+[color]
+  ui = auto
+
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  lg = log --oneline --graph --decorate
+
+# Include private config generated locally
+[include]
+  path = ~/.gitconfig.private
+
