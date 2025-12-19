@@ -63,5 +63,37 @@ require("lazy").setup({
     event = "InsertEnter",
     config = true,
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    event = "VeryLazy",
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "auto",
+          section_separators = "",
+          component_separators = "",
+          globalstatus = true,
+        },
+      })
+    end,
+  },
+  {
+  "lewis6991/gitsigns.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+  config = function()
+    require("gitsigns").setup({
+      signs = {
+        add          = { text = "▎" },
+        change       = { text = "▎" },
+        delete       = { text = "▎" },
+        topdelete    = { text = "▎" },
+        changedelete = { text = "▎" },
+      },
+      signcolumn = true,
+      current_line_blame = false,
+    })
+  end,
+},
 })
 
