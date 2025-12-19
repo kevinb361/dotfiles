@@ -1,34 +1,67 @@
 # Public Zsh configuration
 # Safe to commit and mirror
 
-# ---- Environment ----
+# --------------------
+# Environment
+# --------------------
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 
-# ---- History ----
-HISTFILE=~/.zsh_history
+# Prefer user-local binaries
+export PATH="$HOME/.local/bin:$PATH"
+
+# --------------------
+# History
+# --------------------
+HISTFILE="$HOME/.histfile"
 HISTSIZE=10000
 SAVEHIST=10000
+
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
-# ---- Completion ----
+# --------------------
+# Shell options
+# --------------------
+setopt autocd
+setopt beep
+setopt extendedglob
+setopt nomatch
+setopt notify
+setopt interactivecomments
+
+# --------------------
+# Completion system
+# --------------------
+zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle :compinstall filename "$HOME/.zshrc"
+
 autoload -Uz compinit
-compinit
 
-# ---- Prompt (simple, portable) ----
-autoload -Uz promptinit
-promptinit
-prompt pure 2>/dev/null || prompt default
+# Cache completions for 24 hours (faster startup)
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
-# ---- Aliases (safe) ----
-alias ll='ls -lah'
-alias grep='grep --color=auto'
+# --------------------
+# Prompt (simple, portable)
+# --------------------
+PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
 
-# ---- Local overrides (NOT committed) ----
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+# --------------------
+# Aliases (portable)
+# --------------------
+alias ls='ls --color=auto'
+alias ll='ls -al'
+
+# --------------------
+# Local overrides (NOT committed)
+# --------------------
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
