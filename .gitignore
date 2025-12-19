@@ -1,0 +1,11 @@
+# Never commit secrets or machine-local state
+secrets/
+local/
+
+# Env files
+*.env
+
+# Editor / OS junk
+.DS_Store
+*.swp
+*~
