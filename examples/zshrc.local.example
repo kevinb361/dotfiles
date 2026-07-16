@@ -1,0 +1,10 @@
+# Machine-local shell settings. Copy to ~/.zshrc.local; do not commit the copy.
+
+# Use a subtle 256-color value to distinguish this host in the prompt.
+export DOTFILES_HOST_COLOR=23
+
+# Machine-specific environment belongs here.
+# export EXAMPLE_API_URL="http://127.0.0.1:8000"
+
+# Source a private environment file if needed; keep it mode 0600.
+# [[ -r "$HOME/.config/sh/secrets.env" ]] && source "$HOME/.config/sh/secrets.env"

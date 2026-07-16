@@ -1,0 +1,10 @@
+# Copy to ~/.gitconfig.local and replace the placeholders.
+[user]
+  name = Your Name
+  email = you@example.com
+
+# Optional machine-local settings:
+# [commit]
+#   gpgSign = true
+# [user]
+#   signingKey = KEY_ID

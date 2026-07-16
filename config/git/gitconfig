@@ -1,0 +1,33 @@
+# Public Git defaults. Identity, signing, work-specific URLs, and credential helpers belong in
+# ~/.gitconfig.local, which Git silently skips when absent.
+
+[include]
+  path = ~/.gitconfig.local
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = false
+
+[push]
+  default = simple
+
+[merge]
+  conflictStyle = zdiff3
+
+[diff]
+  colorMoved = default
+
+[color]
+  ui = auto
+
+[color "diff"]
+  frag = brightcyan bold
+
+[alias]
+  st = status --short --branch
+  co = checkout
+  br = branch
+  ci = commit
+  lg = log --oneline --graph --decorate

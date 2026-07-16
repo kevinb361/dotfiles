@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install validators
+        run: sudo apt-get update && sudo apt-get install -y shellcheck zsh tmux lua5.4
+      - name: Validate
+        run: make ci

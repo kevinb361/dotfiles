@@ -1,0 +1,16 @@
+# Machine-local/private state
+local/
+secrets/
+*.env
+.zshrc.local
+.gitconfig.local
+
+# Editor and OS state
+.DS_Store
+*.swp
+*~
+
+# Generated caches
+__pycache__/
+*.pyc
+.nvim/

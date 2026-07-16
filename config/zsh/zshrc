@@ -1,0 +1,149 @@
+#!/usr/bin/env zsh
+
+# Portable interactive base. Put machine-specific paths, secrets, and host colors in
+# ~/.zshrc.local; this file intentionally contains none of them.
+
+typeset -U path PATH
+for user_bin in \
+  "$HOME/bin" \
+  "$HOME/.local/bin" \
+  "$HOME/.bun/bin" \
+  "$HOME/.opencode/bin" \
+  "$HOME/.npm-global/bin"
+do
+  [[ -d "$user_bin" ]] && path=("$user_bin" $path)
+done
+export PATH
+
+if command -v nvim >/dev/null 2>&1; then
+  export EDITOR=nvim
+  export VISUAL=nvim
+  alias vim=nvim
+else
+  export EDITOR=vim
+  export VISUAL=vim
+fi
+export PAGER=less
+
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=100000
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt INC_APPEND_HISTORY
+
+# Shell behavior
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt EXTENDED_GLOB
+setopt INTERACTIVE_COMMENTS
+
+# Completion
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+[[ -n "${LS_COLORS:-}" ]] && zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+
+bindkey -e
+
+# Portable aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+if command -v bat >/dev/null 2>&1; then
+  alias cat='bat --paging=never'
+elif command -v batcat >/dev/null 2>&1; then
+  alias bat=batcat
+  alias cat='batcat --paging=never'
+fi
+
+command -v fdfind >/dev/null 2>&1 && alias fd=fdfind
+command -v rg >/dev/null 2>&1 && alias rgi='rg -i'
+
+if command -v git >/dev/null 2>&1; then
+  alias gs='git status'
+  alias gd='git diff'
+  alias gl='git log --oneline --graph --decorate -20'
+fi
+
+command -v tmux >/dev/null 2>&1 && alias ta='tmux attach || tmux new'
+
+if command -v dircolors >/dev/null 2>&1; then
+  if [[ -r "$HOME/.dircolors" ]]; then
+    eval "$(dircolors -b "$HOME/.dircolors")"
+  else
+    eval "$(dircolors -b)"
+  fi
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+fi
+
+if command -v eza >/dev/null 2>&1; then
+  alias ls=eza
+  alias ll='eza -al --group-directories-first'
+  alias la='eza -a'
+  alias lt='eza --tree --level=2 --group-directories-first'
+  alias lla='eza -alh --group-directories-first'
+fi
+
+# Prompt. Set DOTFILES_HOST_COLOR in ~/.zshrc.local for per-machine identity.
+autoload -Uz colors vcs_info
+colors
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats '(%b)'
+zstyle ':vcs_info:git:*' actionformats '(%b|%a)'
+
+precmd() {
+  local last_status=$?
+  vcs_info
+
+  local status_segment=''
+  (( last_status != 0 )) && status_segment=" %F{red}[${last_status}]%f"
+
+  PROMPT="%F{${DOTFILES_HOST_COLOR:-green}}%n@%m%f:%F{blue}%~%f %F{yellow}\${vcs_info_msg_0_}%f${status_segment}%# "
+}
+setopt PROMPT_SUBST
+
+# Optional tool hooks
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+
+if [[ -d "$HOME/.zsh_plugins/fzf" ]]; then
+  path=("$HOME/.zsh_plugins/fzf/bin" $path)
+  if [[ -t 0 && -t 1 ]]; then
+    [[ -f "$HOME/.zsh_plugins/fzf/shell/completion.zsh" ]] && source "$HOME/.zsh_plugins/fzf/shell/completion.zsh"
+    [[ -f "$HOME/.zsh_plugins/fzf/shell/key-bindings.zsh" ]] && source "$HOME/.zsh_plugins/fzf/shell/key-bindings.zsh"
+  fi
+fi
+
+if [[ -t 0 && -t 1 ]]; then
+  [[ -f "$HOME/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && source "$HOME/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  [[ -f "$HOME/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source "$HOME/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
+# Prefix-history search for normal and application cursor modes.
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
+bindkey '^[OA' up-line-or-beginning-search
+bindkey '^[OB' down-line-or-beginning-search
+[[ -n "${terminfo[kcuu1]}" ]] && bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+[[ -n "${terminfo[kcud1]}" ]] && bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+
+# Local values load last so they can override the portable defaults.
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
