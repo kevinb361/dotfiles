@@ -82,6 +82,7 @@ link_file config/nvim/lazy-lock.json .config/nvim/lazy-lock.json
 link_file config/nvim/lua/terminal_palette_overrides.lua .config/nvim/lua/terminal_palette_overrides.lua
 link_file config/alacritty/alacritty.toml .config/alacritty/alacritty.toml
 link_file config/foot/foot.ini .config/foot/foot.ini
+link_file config/git/hooks/pre-commit .claude/git-hooks/pre-commit
 
 printf '\nLocal override templates:\n'
 printf '  cp %q %q\n' "$ROOT/examples/zshrc.local.example" "$TARGET_HOME/.zshrc.local"

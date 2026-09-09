@@ -28,5 +28,6 @@ remove_link config/nvim/lazy-lock.json .config/nvim/lazy-lock.json
 remove_link config/nvim/lua/terminal_palette_overrides.lua .config/nvim/lua/terminal_palette_overrides.lua
 remove_link config/alacritty/alacritty.toml .config/alacritty/alacritty.toml
 remove_link config/foot/foot.ini .config/foot/foot.ini
+remove_link config/git/hooks/pre-commit .claude/git-hooks/pre-commit
 
 printf '\nBackups and machine-local override files were left untouched.\n'

@@ -13,6 +13,7 @@ Git. This is not a framework and it does not attempt to capture an entire home d
 - tmux: vi navigation and the Blackout Moss status palette
 - Neovim 0.11+: a small lazy.nvim setup and matching terminal-first highlights
 - Alacritty and foot: matching Blackout Moss terminal palettes
+- Git hooks: a documentation-freshness `pre-commit` gate, installed per repository
 
 Host-specific window-manager, display, GPU, service, secret, and work configuration is excluded.
 
@@ -37,6 +38,20 @@ Existing targets are moved under:
 ```text
 ~/.local/state/dotfiles/backups/<UTC timestamp>/
 ```
+
+### Git hooks
+
+`.git/hooks/` is never version controlled, so each repository otherwise grows its own drifting
+copy of a hook. `install.sh` links the tracked hook to `~/.claude/git-hooks/pre-commit`, and the
+per-repository installer points individual checkouts at the same file:
+
+```bash
+./install-git-hooks.sh --dry-run ~/projects/example
+./install-git-hooks.sh ~/projects/example
+```
+
+A hook that has diverged is reported and left alone; `--force` replaces it after taking a backup.
+That protects repositories which deliberately wrap the shared gate in extra checks.
 
 The installer uses absolute symlinks and is safe to rerun. It never overwrites machine-local
 files. If `~/.gitconfig` already exists and `~/.gitconfig.local` does not, the existing file is

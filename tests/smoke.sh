@@ -22,6 +22,7 @@ managed=(
   .config/nvim/lua/terminal_palette_overrides.lua
   .config/alacritty/alacritty.toml
   .config/foot/foot.ini
+  .claude/git-hooks/pre-commit
 )
 
 for relative in "${managed[@]}"; do
@@ -80,5 +81,51 @@ mkdir -p "$TMP/tmux"
 TMUX_TMPDIR="$TMP/tmux" tmux -L dotfiles-ci -f "$ROOT/config/tmux/tmux.conf" \
   new-session -d -s dotfiles-ci
 TMUX_TMPDIR="$TMP/tmux" tmux -L dotfiles-ci kill-server
+
+# The per-repo git hook installer links, is idempotent, protects divergence,
+# and never writes during a dry run.
+HOOK_SOURCE="$ROOT/config/git/hooks/pre-commit"
+HOOK_STATE="$TMP/hook-state"
+repo_hook() { git -C "$1" rev-parse --absolute-git-dir; }
+
+git init -q "$TMP/repo-fresh"
+XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" "$TMP/repo-fresh" >/dev/null
+fresh_hook="$(repo_hook "$TMP/repo-fresh")/hooks/pre-commit"
+[[ -L "$fresh_hook" ]]
+[[ $(readlink "$fresh_hook") == "$HOOK_SOURCE" ]]
+
+# Re-running is a no-op, not a second backup.
+XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" "$TMP/repo-fresh" >/dev/null
+[[ $(readlink "$fresh_hook") == "$HOOK_SOURCE" ]]
+
+# An identical plain-file hook is adopted.
+git init -q "$TMP/repo-copy"
+copy_hook="$(repo_hook "$TMP/repo-copy")/hooks/pre-commit"
+mkdir -p "$(dirname "$copy_hook")"
+cp "$HOOK_SOURCE" "$copy_hook"
+XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" "$TMP/repo-copy" >/dev/null
+[[ -L "$copy_hook" ]]
+
+# A diverged hook is preserved unless forced.
+git init -q "$TMP/repo-diverged"
+div_hook="$(repo_hook "$TMP/repo-diverged")/hooks/pre-commit"
+mkdir -p "$(dirname "$div_hook")"
+printf '#!/usr/bin/env bash\n# local gate\nexit 0\n' > "$div_hook"
+if XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" "$TMP/repo-diverged" >/dev/null 2>&1; then
+  printf 'diverged hook was replaced without --force\n' >&2
+  exit 1
+fi
+grep -q '^# local gate$' "$div_hook"
+
+XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" --force "$TMP/repo-diverged" >/dev/null
+[[ -L "$div_hook" ]]
+div_backups=("$HOOK_STATE"/dotfiles/backups/*/git-hooks/repo-diverged-pre-commit)
+grep -q '^# local gate$' "${div_backups[0]}"
+
+# Dry run leaves an untouched repository alone.
+git init -q "$TMP/repo-dry"
+dry_hook="$(repo_hook "$TMP/repo-dry")/hooks/pre-commit"
+XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" --dry-run "$TMP/repo-dry" >/dev/null
+[[ ! -L "$dry_hook" ]]
 
 printf 'dotfiles smoke test passed\n'
