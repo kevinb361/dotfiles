@@ -23,6 +23,7 @@ managed=(
   .config/alacritty/alacritty.toml
   .config/foot/foot.ini
   .claude/git-hooks/pre-commit
+  .claude/git-hooks/lib/doc-check.sh
 )
 
 for relative in "${managed[@]}"; do
@@ -127,5 +128,62 @@ git init -q "$TMP/repo-dry"
 dry_hook="$(repo_hook "$TMP/repo-dry")/hooks/pre-commit"
 XDG_STATE_HOME="$HOOK_STATE" "$ROOT/install-git-hooks.sh" --dry-run "$TMP/repo-dry" >/dev/null
 [[ ! -L "$dry_hook" ]]
+
+# The doc-check library is the single copy of the gate: a hook that wraps it
+# must be able to source it, and must refuse to run when it is missing rather
+# than silently letting the commit through.
+LIB="$ROOT/config/git/hooks/lib/doc-check.sh"
+[[ -r "$LIB" ]]
+# shellcheck disable=SC1090
+( . "$LIB"; declare -f doc_check_run >/dev/null ) || {
+  printf 'doc-check.sh did not define doc_check_run\n' >&2
+  exit 1
+}
+
+git init -q "$TMP/repo-wrapper"
+wrapper_hook="$(repo_hook "$TMP/repo-wrapper")/hooks/pre-commit"
+mkdir -p "$(dirname "$wrapper_hook")"
+cat > "$wrapper_hook" <<WRAPPER
+#!/usr/bin/env bash
+set -e
+DOC_CHECK_LIB=\${DOC_CHECK_LIB:-$LIB}
+if [ ! -r "\$DOC_CHECK_LIB" ]; then
+  printf 'missing doc-check library\\n' >&2
+  exit 1
+fi
+# shellcheck disable=SC1090
+. "\$DOC_CHECK_LIB"
+doc_check_run
+WRAPPER
+chmod +x "$wrapper_hook"
+
+git -C "$TMP/repo-wrapper" config user.email smoke@example.invalid
+git -C "$TMP/repo-wrapper" config user.name 'Smoke Test'
+printf '# doc\n' > "$TMP/repo-wrapper/CLAUDE.md"
+printf 'x = 1\n' > "$TMP/repo-wrapper/app.py"
+git -C "$TMP/repo-wrapper" add -A
+git -C "$TMP/repo-wrapper" commit -qm init --no-verify
+
+# A staged secret with no documentation update is blocked without a terminal.
+printf 'SECRET_TOKEN = "x"\n' >> "$TMP/repo-wrapper/app.py"
+git -C "$TMP/repo-wrapper" add -A
+if git -C "$TMP/repo-wrapper" commit -qm 'add token' </dev/null >/dev/null 2>&1; then
+  printf 'wrapper hook allowed an undocumented secret change\n' >&2
+  exit 1
+fi
+
+# Documenting it in CLAUDE.md satisfies the gate.
+printf 'token handling\n' >> "$TMP/repo-wrapper/CLAUDE.md"
+git -C "$TMP/repo-wrapper" add -A
+git -C "$TMP/repo-wrapper" commit -qm 'add token and docs' </dev/null >/dev/null
+
+# A missing library must block rather than skip the gate.
+printf 'ANOTHER_SECRET = "y"\n' >> "$TMP/repo-wrapper/app.py"
+git -C "$TMP/repo-wrapper" add -A
+if DOC_CHECK_LIB="$TMP/absent-doc-check.sh" \
+   git -C "$TMP/repo-wrapper" commit -qm 'no library' </dev/null >/dev/null 2>&1; then
+  printf 'wrapper hook ran without its doc-check library\n' >&2
+  exit 1
+fi
 
 printf 'dotfiles smoke test passed\n'

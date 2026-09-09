@@ -29,5 +29,6 @@ remove_link config/nvim/lua/terminal_palette_overrides.lua .config/nvim/lua/term
 remove_link config/alacritty/alacritty.toml .config/alacritty/alacritty.toml
 remove_link config/foot/foot.ini .config/foot/foot.ini
 remove_link config/git/hooks/pre-commit .claude/git-hooks/pre-commit
+remove_link config/git/hooks/lib/doc-check.sh .claude/git-hooks/lib/doc-check.sh
 
 printf '\nBackups and machine-local override files were left untouched.\n'

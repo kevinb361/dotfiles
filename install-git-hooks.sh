@@ -95,4 +95,11 @@ for repo in "${repos[@]}"; do
   printf 'link    %s -> %s\n' "$target" "$SOURCE"
 done
 
+# Repositories that keep their own hook (because they wrap the shared gate in
+# project-specific checks) source the library from the path install.sh links.
+if [[ ! -r "${DOTFILES_HOME:-$HOME}/.claude/git-hooks/lib/doc-check.sh" ]]; then
+  printf '\nnote    %s is not linked yet;\n' "${DOTFILES_HOME:-$HOME}/.claude/git-hooks/lib/doc-check.sh"
+  printf '        run ./install.sh so hooks that wrap the shared gate can find it.\n'
+fi
+
 exit "$status"

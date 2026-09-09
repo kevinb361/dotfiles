@@ -5,10 +5,10 @@ SHELL := /bin/bash
 ci: lint syntax test
 
 lint:
-	shellcheck install.sh uninstall.sh install-git-hooks.sh tests/smoke.sh config/git/hooks/pre-commit
+	shellcheck install.sh uninstall.sh install-git-hooks.sh tests/smoke.sh config/git/hooks/pre-commit config/git/hooks/lib/doc-check.sh
 
 syntax:
-	bash -n install.sh uninstall.sh install-git-hooks.sh tests/smoke.sh config/git/hooks/pre-commit
+	bash -n install.sh uninstall.sh install-git-hooks.sh tests/smoke.sh config/git/hooks/pre-commit config/git/hooks/lib/doc-check.sh
 	zsh -n config/zsh/zshrc
 	git config -f config/git/gitconfig --list >/dev/null
 	python3 -c 'import pathlib,tomllib; [tomllib.loads(p.read_text()) for p in pathlib.Path("config").rglob("*.toml")]'

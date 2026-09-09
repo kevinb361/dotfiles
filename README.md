@@ -53,6 +53,19 @@ per-repository installer points individual checkouts at the same file:
 A hook that has diverged is reported and left alone; `--force` replaces it after taking a backup.
 That protects repositories which deliberately wrap the shared gate in extra checks.
 
+The check itself lives in `config/git/hooks/lib/doc-check.sh` and is linked to
+`~/.claude/git-hooks/lib/`. A repository that needs extra gates keeps its own hook and sources
+that library rather than copying the logic:
+
+```bash
+DOC_CHECK_LIB=${DOC_CHECK_LIB:-$HOME/.claude/git-hooks/lib/doc-check.sh}
+[ -r "$DOC_CHECK_LIB" ] || { printf 'missing doc-check library\n' >&2; exit 1; }
+. "$DOC_CHECK_LIB"
+doc_check_run
+```
+
+A missing library blocks the commit instead of quietly skipping the gate.
+
 The installer uses absolute symlinks and is safe to rerun. It never overwrites machine-local
 files. If `~/.gitconfig` already exists and `~/.gitconfig.local` does not, the existing file is
 migrated to `~/.gitconfig.local`, set to mode `0600`, and included by the public config. This
