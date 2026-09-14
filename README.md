@@ -33,11 +33,17 @@ Then install:
 ./install.sh
 ```
 
-Existing targets are moved under:
+Existing targets are moved under this default backup path:
 
 ```text
 ~/.local/state/dotfiles/backups/<UTC timestamp>/
 ```
+
+A non-empty `XDG_STATE_HOME` takes precedence, placing backups under
+`$XDG_STATE_HOME/dotfiles/backups/<UTC timestamp>/`. Otherwise, backups go under
+`$DOTFILES_HOME/.local/state/dotfiles/backups/<UTC timestamp>/` when `DOTFILES_HOME` is
+non-empty, or `$HOME/.local/state/dotfiles/backups/<UTC timestamp>/` when it is not.
+Unset and empty overrides both fall back, matching Bash's `${VAR:-fallback}` semantics.
 
 ### Git hooks
 
